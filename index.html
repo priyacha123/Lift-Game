@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elevator Dodge Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h2 id="status">🎯 Reach the Lit Floor!</h2>
+    <p id="stats">❤️ Lives: 3 | ⭐ Score: 0</p>
+  </header>
+
+  <main>
+    <div class="game-container">
+      <div class="progress-bar" id="progress"></div>
+      <div class="lift" id="lift">
+        <div class="character" id="character">🤖</div>
+      </div>
+
+      <!-- Floors -->
+      <div class="floor" id="floor-4"><span class="label">Floor 4</span></div>
+      <div class="floor" id="floor-3"><span class="label">Floor 3</span></div>
+      <div class="floor" id="floor-2"><span class="label">Floor 2</span></div>
+      <div class="floor" id="floor-1"><span class="label">Floor 1</span></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="controls">
+      <button onclick="moveUp()">⬆</button>
+      <button onclick="moveDown()">⬇</button>
+      <button onclick="moveLeft()">⬅</button>
+      <button onclick="moveRight()">➡</button>
+    </div>
+
+    <button id="restartBtn" onclick="restartGame()">🔁 Restart</button>
+  </footer>
+
+  <!-- Audio Assets -->
+  <audio id="jumpSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_d4760ba8ab.mp3?filename=jump-144275.mp3"></audio>
+  <audio id="warnSound" src="https://cdn.pixabay.com/download/audio/2022/03/01/audio_e5b0d08e93.mp3?filename=warning-136247.mp3"></audio>
+  <audio id="loseSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5932bb52b7.mp3?filename=error-126627.mp3"></audio>
+  
+  <script src="script.js"></script>
+</body>
+</html>
